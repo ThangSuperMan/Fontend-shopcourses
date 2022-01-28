@@ -100,8 +100,11 @@ const Filter = ({ parentCallback }) => {
   ]);
 
   // useState
+  //const [baseURLFetchCourses, setBaseURLFetchCourses] = useState(
+  //"http://localhost:3001/api/fetch_courses"
+  //);
   const [baseURLFetchCourses, setBaseURLFetchCourses] = useState(
-    "http://localhost:3001/api/fetch_courses"
+    "https://shopcourses-filter.herokuapp.com/api/fetch_courses"
   );
 
   const [activeRenderAllCoureses, setActiveRenderAllCourses] = useState(true);
@@ -145,7 +148,10 @@ const Filter = ({ parentCallback }) => {
 
   const renderCoursesByLevel = async (e) => {
     const level = e.target.children[0].value;
-    const URL = "http://localhost:3001/api/fetch_courses/level";
+    //const URL = "http://localhost:3001/api/fetch_courses/level";
+
+    const URL =
+      "https://shopcourses-filter.herokuapp.com/api/fetch_courses/level";
     const coursesByLevel = await Axios.get(`${URL}/${level}`);
     sendDataToParentComponent(coursesByLevel.data);
   };
@@ -158,7 +164,8 @@ const Filter = ({ parentCallback }) => {
     advanceBtnRef.current.classList.remove("active");
 
     // Fetch all courses with all levels
-    const baseURL = "http://localhost:3001";
+    //const baseURL = "http://localhost:3001";
+    const baseURL = "https://shopcourses-filter.herokuapp.com";
     Axios.get(baseURL).then((data) => {
       const allCourses = data.data;
       sendDataToParentComponent(allCourses);
@@ -181,7 +188,10 @@ const Filter = ({ parentCallback }) => {
   const fetchCoursesByTypePrice = (typePrice) => {
     // typePrice props in server mysql have been typed boolean
     // typePrice = 1(true) means must be pay money, typePrice = 0(false) means free
-    const URL = "http://localhost:3001/api/fetch_courses/type_price";
+    //const URL = "http://localhost:3001/api/fetch_courses/type_price";
+
+    const URL =
+      "https://shopcourses-filter.herokuapp.com/api/fetch_courses/type_price";
 
     Axios.get(`${URL}/${typePrice}`).then((data) => {
       console.log("data from type price server");
