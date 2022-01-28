@@ -1,0 +1,213 @@
+/*Media queies*/
+@media screen and (max-width: 1280px) {
+  .course-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .filter-bytech-list {
+    column-gap: 20px;
+    row-gap: 30px;
+    display: inline-grid;
+  }
+
+  .course-item-title {
+    font-size: 17px !important;
+  }
+
+  .course-item-desc {
+    font-size: 14px !important;
+  }
+
+  .course-item-image {
+    height: 100%;
+  }
+
+  .footer-inner {
+    flex-wrap: wrap;
+  }
+
+  .footer-leftbar,
+  .footer-middlebar {
+    width: 50%;
+  }
+
+  .footer-rightbar {
+    margin-inline: auto;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .filter {
+    flex-wrap: wrap;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .filter-bylevel-class span,
+  .filter-byprice-class span {
+    font-size: 14px;
+  }
+
+  .filter-bytech {
+    width: 100%;
+  }
+
+  .filter-bytech-list {
+    width: 100%;
+  }
+
+  .filter-leftbar,
+  .filter-rightbar {
+    margin-inline: auto;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  .filter-leftbar {
+    border-right: none;
+    padding-inline: 0;
+  }
+
+  .filter-bylevel,
+  .filter-byprice {
+    margin-bottom: 50px;
+  }
+
+  .filter-bytech-item {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-rightbar,
+  .footer-middlebar,
+  .footer-leftbar {
+    width: 100%;
+  }
+
+  .footer-middlebar {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-inner {
+    width: 100%;
+  }
+  .header-menu-item {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 8px 25px;
+  }
+
+  .btn-mobile {
+    padding: 6px 23px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-inner {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+  }
+
+  .content {
+    width: 100% !important;
+    padding-inline: 15px;
+  }
+  .inner-menu-item {
+    font-size: 13px;
+  }
+
+  .quote {
+    margin-bottom: 50px !important;
+  }
+
+  .quote-title {
+    font-size: 45px !important;
+  }
+
+  .quote-body {
+    font-size: 18px !important;
+  }
+
+  .filter {
+    width: 100%;
+  }
+
+  .filter-bytech-list {
+    gap: 10px !important;
+  }
+
+  .filter-bytech-item {
+    /*width: 100%;*/
+    margin-inline: auto;
+    width: 60px !important;
+    height: 60px !important;
+    /*transition: scale 0.3s ease-in-out;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-bytech-item span {
+    display: none;
+  }
+
+  .filter-bytech-item img {
+    width: 56px !important;
+    height: 56px !important;
+    object-fit: cover;
+    transition: width 0.2s, height 0.2s linear;
+  }
+
+  .filter-bytech-item:hover img {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .course-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .course {
+    margin-bottom: 224px;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 48px;
+  }
+
+  .footer-bottom-rightbar,
+  .footer-bottom-leftbar {
+    width: 100%;
+  }
+
+  .footer-bottom-rightbar {
+    text-align: center;
+  }
+
+  .footer-bottom-leftbar {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .filter-bylevel-class span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    /*font-weight: 400;*/
+  }
+}
